@@ -7,11 +7,11 @@
       <legend>Airtime Top-up</legend>
         <div class="input-wrapper">
           <label for="phone" class='required-input'>Phone Number</label>
-          <input type="number" name="number" id="number" placeholder="Phone number" required>
+          <input type="number" name="number" id="number" placeholder="Phone Number" required>
         </div>
         <div class="input-wrapper">
           <label for="Amount" class='required-input'>Amount</label>
-          <input type="number" name="amount" id="amount" placeholder="Phone Number" required>
+          <input type="number" name="amount" id="amount" placeholder="Phone Amount" required>
         </div>
         <div class="input-wrapper">
           <label for="phone" class='required-input'>Network</label>
@@ -38,11 +38,7 @@
         $network = $_POST['network'];
         $number = $_POST['number'];
         $key = "hfucj5jatq8h";
-       
-
-
-
-    
+  
       }
 
 
