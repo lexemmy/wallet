@@ -1,16 +1,31 @@
 
 
 
-
-
-<form method="POST" action="index.php">
-
-<label>network</label><input type="text" name="network"> <br>
-<label>number</label><input type="number" name="number"> <br>
-<label>amount</label><input type="number" name="amount"> <br>
-<button type="submit" name="submit">submit</button>
-
-</form>
+ <h1 style="text-align:center">Wallet API </h1>
+    <form method="POST" action='index.php'>
+      <fieldset>
+      <legend>Airtime Top-up</legend>
+        <div class="input-wrapper">
+          <label for="phone" class='required-input'>Phone Number</label>
+          <input type="number" name="number" id="number" placeholder="Phone number" required>
+        </div>
+        <div class="input-wrapper">
+          <label for="Amount" class='required-input'>Amount</label>
+          <input type="number" name="amount" id="amount" placeholder="Phone Number" required>
+        </div>
+        <div class="input-wrapper">
+          <label for="phone" class='required-input'>Network</label>
+          <select name="network" id="network">
+            <option name="network" value="MTN-ng">MTN</option>
+            <option name="network" value="GLO">GLO</option>
+            <option  name="network"value="9mobile">9mobile</option>
+            <option  name="network"value="Airtel">Airtel</option>
+          </select>
+        </div>
+        <button type="submit" name="submit">submit</button>
+      </legend>
+      </fieldset>
+    </form>
 
 
 
