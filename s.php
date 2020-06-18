@@ -2,7 +2,7 @@
 
 
  <h1 style="text-align:center">Wallet API </h1>
-    <form method="POST" action='index.php'>
+    <form method="POST" action='s.php'>
       <fieldset>
       <legend>Airtime Top-up</legend>
         <div class="input-wrapper">
