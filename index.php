@@ -1,31 +1,54 @@
 
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title>Wallet API| Airtime top-up</title>
+</head>
 
- <h1 style="text-align:center">Wallet API </h1>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+       <h1 style="text-align:center">Wallet API </h1>
     <form method="POST" action='index.php'>
       <fieldset>
       <legend>Airtime Top-up</legend>
         <div class="input-wrapper">
           <label for="phone" class='required-input'>Phone Number</label>
-          <input type="number" name="number" id="number" placeholder="Phone number" required>
+          <input class="form-control" type="number" name="number" id="number" placeholder="Phone number" required>
         </div>
         <div class="input-wrapper">
           <label for="Amount" class='required-input'>Amount</label>
-          <input type="number" name="amount" id="amount" placeholder="Phone Number" required>
+          <input class="form-control" type="number" name="amount" id="amount" placeholder="Phone Number" required>
         </div>
         <div class="input-wrapper">
           <label for="phone" class='required-input'>Network</label>
-          <select name="network" id="network">
+          <select class="form-control" name="network" id="network">
             <option name="network" value="MTN-ng">MTN</option>
             <option name="network" value="GLO">GLO</option>
             <option  name="network"value="9mobile">9mobile</option>
             <option  name="network"value="Airtel">Airtel</option>
           </select>
         </div>
-        <button type="submit" name="submit">submit</button>
+        <button class="btn btn-sm btn-primary" type="submit" name="submit">submit</button>
       </legend>
       </fieldset>
     </form>
+    </div>
+  </div>
+</div>
+
+
+  </body>
+  </html>
+
 
 
 
