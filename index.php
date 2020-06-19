@@ -1,4 +1,6 @@
-
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,7 +19,7 @@
   <div class="row">
     <div class="col-md-3"></div>
     <div class="col-md-6">
-      <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto" style="background-color: indigo; color: #fff;">
+      <div class="pricing-header mt-3 px-3 py-3 pt-md-5 pb-md-4 mx-auto" style="background-color: indigo; color: #fff;">
        <h1 style="text-align:center">Wallet API </h1>
     <form method="POST" action='index.php'>
       <fieldset>
@@ -40,6 +42,15 @@
           </select>
         </div>
         <button class="btn btn-sm btn-primary form-control" type="submit" name="submit">Top Up</button>
+
+       
+        <?php if(isset($_SESSION['reply'])){
+         echo  '<button class="btn btn-sm form-control btn-success mt-3">';
+         echo $_SESSION['reply'];
+         echo '</button>';
+       } 
+         ?>
+
       </legend>
       </fieldset>
     </form>
@@ -108,7 +119,7 @@ $transaction = json_decode($response);
 
 $reply = $transaction->Message;
 
-echo $reply;
+ $_SESSION['reply'] = $reply;
 }
 
 ?>
