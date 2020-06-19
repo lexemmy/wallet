@@ -28,7 +28,7 @@
         </div>
         <div class="input-wrapper">
           <label for="Amount" class='required-input'>Amount</label>
-          <input class="form-control" type="number" name="amount" id="amount" placeholder="Phone Number" required>
+          <input class="form-control" type="number" name="amount" id="amount" placeholder="Amount" required>
         </div>
         <div class="input-wrapper">
           <label for="phone" class='required-input'>Network</label>
