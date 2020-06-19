@@ -7,11 +7,11 @@
       <legend>Airtime Top-up</legend>
         <div class="input-wrapper">
           <label for="phone" class='required-input'>Phone Number</label>
-          <input type="number" name="number" id="number" min=11 max=11 placeholder="Phone Number" required>
+          <input class="form-control" type="number" name="number" id="number" min=11 max=11 placeholder="Phone Number" required>
         </div>
         <div class="input-wrapper">
           <label for="Amount" class='required-input'>Amount</label>
-          <input type="number" name="amount" id="amount" placeholder="Amount" required>
+          <input class="form-control" type="number" name="amount" id="amount" placeholder="Amount" required>
         </div>
         <div class="input-wrapper">
           <label for="phone" class='required-input'>Network</label>
@@ -49,26 +49,26 @@
             echo "Please enter value above =N=50.00";
         }
         
-        for($i=0; $i < $mtn.count(); $i++){
+        for($i=0; $i < count($mtn); $i++){
           if($i == substr($number,0,3)){
             $network = "MTN";
-          }
+          }else{ echo "Invalid number";}
         }
-        for($i=0; $i < $mobile9.count(); $i++){
+        for($i=0; $i < count($mobile9); $i++){
           if($i == substr($number,0,3)){
             $network = "9mobile";
-          }
+          }else{ echo "Invalid number";}
         }
-        for($i=0; $i < $airtel.count(); $i++){
+        for($i=0; $i < count($airtel); $i++){
           if($i == substr($number,0,3)){
             $network = "Airtel";
-          }
+          }else{ echo "Invalid number";}
         }
 
-        for($i=0; $i < $glo.count(); $i++){
+        for($i=0; $i < count($glo); $i++){
           if($i == substr($number,0,3)){
             $network = "GLO";
-          }
+          }else{ echo "Invalid number";}
         }
   }
 
