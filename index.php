@@ -7,11 +7,11 @@
       <legend>Airtime Top-up</legend>
         <div class="input-wrapper">
           <label for="phone" class='required-input'>Phone Number</label>
-          <input type="number" name="number" id="number" placeholder="Phone Number" required>
+          <input type="number" name="number" id="number" min=11 max=11 placeholder="Phone Number" required>
         </div>
         <div class="input-wrapper">
           <label for="Amount" class='required-input'>Amount</label>
-          <input type="number" name="amount" id="amount" placeholder="Phone Amount" required>
+          <input type="number" name="amount" id="amount" placeholder="Amount" required>
         </div>
         <div class="input-wrapper">
           <label for="phone" class='required-input'>Network</label>
@@ -34,12 +34,43 @@
 
  if (isset($_POST['submit'])) {
 
-        $amount = $_POST['amount'];
-        $network = $_POST['network'];
-        $number = $_POST['number'];
+        $mtn = array('0703', '0706', '0701', '0803', '0806', '0903', '0906');
+        $airtel = array('0702', '0704', '0708', '0802', '0804', '0901', '0907');
+        $mobile9 = array('0702', '0706', '0701', '0803', '0806', '0903', '0906');
+        $glo = array('0702', '0706', '0701', '0803', '0806', '0903', '0906');
+
+        //get user input
+        $amount = $_POST['amount'] ?? "";
+        $network = $_POST['network'] ?? "";
+        $number =  "";//$_POST['number'] ?? "";
         $key = "hfucj5jatq8h";
-  
-      }
+
+        if($amount < 50){
+            echo "Please enter value above =N=50.00";
+        }
+        
+        for($i=0; $i < $mtn.count(); $i++){
+          if($i == substr($number,0,3)){
+            $network = "MTN";
+          }
+        }
+        for($i=0; $i < $mobile9.count(); $i++){
+          if($i == substr($number,0,3)){
+            $network = "9mobile";
+          }
+        }
+        for($i=0; $i < $airtel.count(); $i++){
+          if($i == substr($number,0,3)){
+            $network = "Airtel";
+          }
+        }
+
+        for($i=0; $i < $glo.count(); $i++){
+          if($i == substr($number,0,3)){
+            $network = "GLO";
+          }
+        }
+  }
 
 
 $curl = curl_init();

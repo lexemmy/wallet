@@ -10,13 +10,16 @@ body {
     box-sizing: border-box;
 }
 
-.forms {
+form {
+    position: absolute;
     display: flex;
     justify-content: space-between;
     padding: 2em;
-    text-align: center;
     margin: auto;
-    width: 60%
+    display: flex;
+    flex-direction: column;
+    margin: 1em 0;
+    width: 40%;
 }
 
 input,
