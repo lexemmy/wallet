@@ -44,12 +44,7 @@ session_start();
         <button class="btn btn-sm btn-primary form-control" type="submit" name="submit">Top Up</button>
 
        
-        <?php if(isset($_SESSION['reply'])){
-         echo  '<button class="btn btn-sm form-control btn-success mt-3">';
-         echo $_SESSION['reply'];
-         echo '</button>';
-       } 
-         ?>
+        
 
       </legend>
       </fieldset>
@@ -118,8 +113,18 @@ $transaction = json_decode($response);
 
 
 $reply = $transaction->Message;
+          echo '<div class="container">  <div class="row">';
+          echo '<div class="col-md-3"></div>';
+          echo '<div class="col-md-6">';
+         echo  '<button class="btn btn-sm form-control btn-success mt-3">';
+         echo $reply;
+         echo '</button>';
+         echo '</div>';
+         echo '<div class="col-md-3"></div>';
+         echo '</div> </div>';
+       
+         
 
- $_SESSION['reply'] = $reply;
 }
 
 ?>
